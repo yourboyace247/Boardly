@@ -1,0 +1,412 @@
+/* ===== RESET & BASE STYLES ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    color: #333;
+    line-height: 1.6;
+}
+
+.app {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ===== HEADER STYLES ===== */
+.app-header {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.home-page-icon,
+.create-board,
+.user-icon {
+    flex: 1;
+}
+
+.home-page-icon {
+    text-align: left;
+}
+
+.user-icon {
+    text-align: right;
+}
+
+.create-board {
+    text-align: center;
+}
+
+.app-header i {
+    font-size: 1.5rem;
+    color: #0052cc;
+    transition: all 0.3s ease;
+}
+
+/* ===== BUTTON STYLES ===== */
+.create-board-btn,
+.user-profile-btn,
+.create-new-board-btn {
+    background: #0052cc;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 82, 204, 0.3);
+}
+
+.create-board-btn,
+.user-profile-btn {
+    padding: 12px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.create-board-btn:hover,
+.user-profile-btn:hover {
+    background: #0041a8;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 82, 204, 0.4);
+}
+
+.create-new-board-btn {
+    background: linear-gradient(135deg, #0052cc, #0066ff);
+    padding: 15px 30px;
+    margin: 2rem auto;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.1rem;
+}
+
+.create-new-board-btn:hover {
+    background: linear-gradient(135deg, #0041a8, #0052cc);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 82, 204, 0.5);
+}
+
+/* ===== MAIN CONTENT ===== */
+.main-content {
+    flex: 1;
+    padding: 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.create-board-section {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+/* ===== DASHBOARD STYLES ===== */
+.dashboard h2 {
+    color: white;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.boards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+    padding: 1rem;
+}
+
+/* ===== BOARD PREVIEW CARDS ===== */
+.board-preview {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 12px;
+    padding: 1.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+}
+
+.board-preview:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+    background: rgba(255, 255, 255, 1);
+}
+
+.board-preview h3 {
+    color: #0052cc;
+    margin-bottom: 0.5rem;
+    font-size: 1.3rem;
+}
+
+.board-preview p {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+/* ===== BOARD VIEW STYLES ===== */
+.board {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 16px;
+    padding: 2rem;
+    margin-top: 1rem;
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.board-header {
+    text-align: center;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid #e1e4e8;
+}
+
+.board-header h1 {
+    color: #0052cc;
+    font-size: 2.2rem;
+    font-weight: 700;
+}
+
+/* ===== LISTS CONTAINER ===== */
+.lists-container {
+    display: flex;
+    gap: 1.5rem;
+    overflow-x: auto;
+    padding: 1rem 0;
+    min-height: 500px;
+}
+
+.list {
+    background: #f8f9fa;
+    border-radius: 12px;
+    padding: 1rem;
+    min-width: 280px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+    border: 1px solid #e1e4e8;
+}
+
+.list-header {
+    color: #0052cc;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #0052cc;
+    font-size: 1.1rem;
+}
+
+.cards-container {
+    min-height: 100px;
+    margin-bottom: 1rem;
+}
+
+.card {
+    background: white;
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 0.5rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-left: 4px solid #0052cc;
+    cursor: grab;
+    transition: all 0.2s ease;
+}
+
+.card:hover {
+    transform: translateX(5px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.card:active {
+    cursor: grabbing;
+}
+
+.add-card-section,
+.back-btn {
+    color: #0052cc;
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    text-align: center;
+    font-weight: 600;
+}
+
+.add-card-section,
+.back-btn:hover {
+    background: rgba(0, 82, 204, 0.1);
+    color: #0041a8;
+}
+
+.add-list-section
+.add-list-btn {
+    background: rgba(0, 82, 204, 0.1);
+    border: 2px dashed #0052cc;
+    border-radius: 12px;
+    padding: 2rem;
+    min-width: 280px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #0052cc;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 600;
+}
+
+.add-list-section:hover
+.add-list-btn {
+    background: rgba(0, 82, 204, 0.2);
+    border-color: #0041a8;
+    color: #0041a8;
+}
+
+/* ===== FOOTER STYLES ===== */
+footer {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    text-align: center;
+    padding: 2rem;
+    margin-top: auto;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 -2px 20px rgba(0, 0, 0, 0.1);
+}
+
+footer h1 {
+    color: #0052cc;
+    margin-bottom: 0.5rem;
+    font-size: 1.8rem;
+}
+
+footer p {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+/* ===== SCROLLBAR STYLING ===== */
+.lists-container::-webkit-scrollbar {
+    height: 8px;
+}
+
+.lists-container::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+}
+
+.lists-container::-webkit-scrollbar-thumb {
+    background: #0052cc;
+    border-radius: 10px;
+}
+
+.lists-container::-webkit-scrollbar-thumb:hover {
+    background: #0041a8;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 768px) {
+    .app-header {
+        padding: 1rem;
+    }
+    
+    .main-content {
+        padding: 1rem;
+    }
+    
+    .boards-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .lists-container {
+        flex-direction: column;
+    }
+    
+    .list {
+        min-width: auto;
+    }
+}
+
+/* ===== ANIMATIONS ===== */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.board-preview,
+.list,
+.card {
+    animation: fadeIn 0.5s ease-out;
+}
+
+/* ===== DRAG & DROP STATES ===== */
+.dragging {
+    opacity: 0.5;
+    transform: rotate(5deg);
+}
+
+.drop-zone {
+    background: rgba(0, 82, 204, 0.1);
+    border: 2px dashed #0052cc;
+}
+
+.delete-list-btn,
+.delete-board-btn {
+    color: #ca0707;
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    text-align: center;
+    font-weight: 600;
+}
+
+.delete-list-btn,
+.delete-board-btn:hover {
+    background: rgba(0, 82, 204, 0.1);
+    color: #ca0707;
+}
+
+/* Drag & Drop features */
+.card.dragging {
+    opacity: 0.5;
+    transform: rotate(5deg);
+    border: 2px dashed #0079bf;
+}
+
+.list.drop-zone {
+    background-color: #f0f8ff;
+    border: 2px dashed #0079bf;
+    border-radius: 8px;
+}
+
+.cards-container.drop-zone {
+    background-color: #e3f2fd;
+    min-height: 40px;
+    border: 2px dashed #0052cc;
+    border-radius: 4px;
+}

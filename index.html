@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Boardly</title>
+</head>
+<body>
+    <div class="app">
+        <header class="app-header">
+            <div class="home-page-icon">
+                <i class="fa-solid fa-house"></i>
+            </div>
+            <div class="create-board">
+                <button class="create-board-btn" id="create-board-btn">
+                    <i class="fa-solid fa-border-all"></i>
+                </button>
+            </div>
+            <div class="user-icon">
+                <button class="user-profile-btn" id="user-profile-btn">
+                    <i class="fa-solid fa-user"></i>
+                </button>
+            </div>
+        </header>
+        
+        <main class="main-content">
+            <!-- CREATE BOARD SECTION -->
+            <div class="create-board-section">
+                <button class="create-new-board-btn" id="create-new-board-btn">
+                    <i class="fa-solid fa-plus"></i>
+                    Create New Board
+                </button>
+            </div>
+            
+            <!-- DASHBOARD (default visible) -->
+            <div class="dashboard" id="dashboard">
+                <h2>My Boards</h2>
+                <div class="boards-grid" id="boards-grid">
+                    <!-- Dynamic boards will go here -->
+                </div>
+            </div>
+            
+            <!-- BOARD VIEW (hidden initially) -->
+            <div class="board" id="board-container" style="display: none;">
+                <div class="board-header" id="board-header">
+                    <!-- Dynamic board title/actions -->
+                </div>
+                <div class="lists-container" id="lists-container">
+                    <!-- Dynamic lists will go here -->
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <h1>Boardly</h1>
+            <p>All right reserved ©</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
