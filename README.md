@@ -45,7 +45,7 @@ Click the button to delete the list.
 Here is how the list displays in the app.
 
 ### Add Card Button:
-[!AddCardInListBtn](https://github.com/yourboyace247/Boardly/blob/main/images/AddCardInListBtn.png?raw=true)
+[!AddCardInListBtn](https://raw.githubusercontent.com/yourboyace247/Boardly/refs/heads/main/images/AddCardInListBtn.png)
 
 Click the "Add Card" button to add your tasks. I created tasks in "Leg day" list with all the exercises I do on my leg day.
 
