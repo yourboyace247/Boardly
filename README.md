@@ -1,4 +1,4 @@
-# :clipboard: Boardly a Drag&Drop To Do List
+# :clipboard: Boardly a Drag & Drop To Do List
 
 ### Building a To Do List App with Drag and Drop features
 
@@ -27,12 +27,12 @@ Click the "X" button to delete the board.
 ### Go Back to Boards Button:
 ![GoBackToBoardsBtn](https://github.com/yourboyace247/Boardly/blob/main/images/GoBackToBoardsBtn.png?raw=true)
 
-While open a board you can click the "Go Back" button to go back to Home Page.
+While you open a board you can click the "Go Back" button to go back to Home Page.
 
 ### Add List Button:
 ![AddListBtn](https://github.com/yourboyace247/Boardly/blob/main/images/AddListBtn.png?raw=true)
 
-Click the "Add List" button to create a new list the board. In my example I created a list named "Leg day".
+Click the "Add List" button to create a new list in the board. In my example I created a list named "Leg day".
 
 ### Delete List Button:
 ![DeleteListBtn](https://github.com/yourboyace247/Boardly/blob/main/images/DeleteListBtn.png?raw=true)
