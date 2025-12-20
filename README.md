@@ -61,6 +61,6 @@ You can drag and drop tasks from one list to another, in my case I added the exe
 3. Algorithms & Data Structures: How do you store and update this structure.
 4. LocalStorage/IndexedDB: For persistence.
 
-## :tv: [Boardly Video Presentation](https://)
+## :tv: [Boardly Video Presentation](https://drive.google.com/file/d/1arVVwoVwVuqIQXNjGVlVC9rQ7MxfhhzP/view?usp=sharing)
 
 You can watch my video presentation, and check in action how the website works.
