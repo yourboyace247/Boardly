@@ -63,4 +63,4 @@ You can drag and drop tasks from one list to another, in my case I added the exe
 
 ## :tv: [Boardly Video Presentation](https://drive.google.com/file/d/1arVVwoVwVuqIQXNjGVlVC9rQ7MxfhhzP/view?usp=sharing)
 
-You can watch my video presentation, and check in action how the website works.
+You can watch my video presentation, and check in action how the app works.
